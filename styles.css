@@ -56,11 +56,15 @@ html, body {
     
     /* border-bottom: 1px solid rgba(255, 255, 255, .3) */
 }
+
 .main-nav1 a{
+    position: relative;
     color: black;
     font-size: 3em;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    left: -90px;
+    
 }
 
 .main-nav li {
@@ -68,8 +72,11 @@ html, body {
 }
 
 .nav a:hover {
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgb(138, 184, 245);
     font-stretch: extra-expanded;
+    text-decoration-color: blueviolet ;
+    text-decoration: underline;
+
     
 }
 
@@ -77,8 +84,10 @@ html, body {
     background-color: rgba(0, 0, 0, .6);
     background-image: url("Header Background.jpg");
     background-blend-mode: multiply;
-    background-size: cover;
+    /* background-size: cover; */
+    height: 450px;
     padding-bottom: 30px;
+    /* padding-top: 400px; */
     
 }
 .main-header1 {
@@ -97,14 +106,55 @@ html, body {
     font-family: "Booter - Zero Zero";
     font-weight: normal;
     color: white;
+    
 }
-
+@keyframes bandname {
+    0%{
+        left: -1300px;
+    }
+    50%
+    {
+        
+    }
+    100%
+    {
+        left: 100%;
+    }
+    
+}
+@keyframes bandname1 {
+    0%{
+        font-size: 26em;
+    }
+    50%
+    {
+        font-size: 28em;
+    }
+    100%
+    {
+        font-size: 26em;
+    }
+    
+}
+.anim{
+    position: relative;
+    right: 1300px;
+    animation: bandname;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    
+}
 .band-name-large {
     font-size: 19em;
+    position: absolute;
+    left: 240px;
+    /* animation: bandname 3s infinite linear; */
 }
 .band-name-large1 {
     font-size: 26em;
-    padding-top: 20%;
+    padding-top: 13%;
+    position: relative;
+    animation: bandname1 3s infinite linear;
 }
 .content-section {
     margin: 1em;
@@ -125,6 +175,17 @@ html, body {
     font-size: 5em;
     /* margin-bottom: 240px; */
 }
+@keyframes uptor {
+    0%{
+        left: 0%;
+        
+    }
+    100%
+    {
+        right: 0%;
+    }
+    
+}
 .section-header1 {
     font-family: "Metal Mania";
     font-weight: normal;
@@ -133,6 +194,7 @@ html, body {
     font-size: 5em;
     margin-top: 150px;
     margin-bottom: 150px;
+     animation: uptor 10s  infinite linear ; 
 }
 .about-band-image {
     float: left;
